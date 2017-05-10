@@ -60,6 +60,7 @@
 				item.parentNode.classList.add('checked')
 			}
 			item.addEventListener('change', function(){
+				alert(parseInt(getAndroidVersion(), 10))
 				allElements.map(function(item){
 					item.parentNode.classList.remove('checked');
 				})
