@@ -44,6 +44,7 @@
 	}
 
 	items.map(function(item){
+
 		if (item.checked) {
 			loadExternalContent(item)
 		}
@@ -56,7 +57,7 @@
 	
 	if (parseInt(getAndroidVersion(), 10) < 4) {
 		allElements.map(function(item){
-			alert(item.parentNode)
+			alert(item.parentNode.classList, item.parentElement.classList)
 			if (item.checked) {
 				item.parentNode.classList.add('checked')
 			}
