@@ -54,6 +54,7 @@ body {
 			clear: none;
 			overflow: visible;
 		}
+		// fix for android2.3
 		@media screen and (min-width:0\0) {
 			&.checked label {
 				background: none;

@@ -6,14 +6,19 @@
 	var loadExternalContent;
 	var getAndroidVersion;
 
-	getAndroidVersion = function(ua) {
-	    ua = (ua || navigator.userAgent).toLowerCase(); 
-	    var match = ua.match(/android\s([0-9\.]*)/);
-	    return match ? match[1] : false;
-	};
-
 	items = [].slice.call(document.querySelectorAll('[data-request-url]'));
 	allElements = [].slice.call(document.querySelectorAll('.js-accordion_item'));
+
+	getAndroidVersion = function(ua) {
+
+		var match;
+
+	    ua = (ua || navigator.userAgent).toLowerCase(); 
+	    match = ua.match(/android\s([0-9\.]*)/);
+	    return match ? match[1] : false;
+
+	};
+
 	loadExternalContent = function(item) {
 
 		var data;
@@ -41,10 +46,10 @@
 			}
 			xhr.send();
 		}
+
 	}
 
 	items.map(function(item){
-
 		if (item.checked) {
 			loadExternalContent(item)
 		}
@@ -55,7 +60,7 @@
 
 	// fix for android 2.3 lack of :checked pseudo class support
 	
-	
+	if (parseInt(getAndroidVersion(), 10) < 4) {
 		allElements.map(function(item){
 			if (item.checked) {
 				item.parentNode.className += ' checked';
@@ -67,6 +72,6 @@
 				item.parentNode.className += ' checked';
 			})
 		})
-	
+	}
 
 }())
