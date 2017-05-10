@@ -57,15 +57,14 @@
 	
 	if (parseInt(getAndroidVersion(), 10) < 4) {
 		allElements.map(function(item){
-			alert(item.parentNode.className)
 			if (item.checked) {
-				item.parentNode.classList.add('checked')
+				item.parentNode.className += 'checked';
 			}
 			item.addEventListener('change', function(){
 				allElements.map(function(item){
-					item.parentNode.classList.remove('checked');
+					item.parentNode.className = item.parentNode.className.replace('checked', '');
 				})
-				item.parentNode.classList.add('checked')
+				item.parentNode.className += 'checked';
 			})
 		})
 	}
