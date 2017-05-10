@@ -2,6 +2,7 @@
 	"use strict";
 
 	var items;
+	var allElements;
 	var loadExternalContent;
 	var getAndroidVersion;
 
