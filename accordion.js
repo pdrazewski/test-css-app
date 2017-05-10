@@ -55,9 +55,7 @@
 	// fix for android 2.3 lack of :checked pseudo class support
 	
 	if (parseInt(getAndroidVersion(), 10) < 4) {
-
 		allElements.map(function(item){
-			alert(parseInt(getAndroidVersion(), 10))
 			if (item.checked) {
 				item.parentNode.classList.add('checked')
 			}
