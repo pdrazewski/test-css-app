@@ -1,3 +1,17 @@
+// vars & mixins start
+@mixin breakpoint($breakpoint) {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+$font-primary: "Arial";
+$cl-white: #FFF;
+$cl-greyE: #EEE;
+$cl-greyD: #DDD;
+$cl-greyC: #CCC;
+// vars & mixins stop
+
+// helpers start
 body {
 	padding: 0;
 	margin: 0;
@@ -13,15 +27,18 @@ body {
 		padding-top: 20px;
 	}
 }
+// helpers stop
+
+// component style start
 .c-accordion {
 	margin: 10px;
 	line-height: 22px;
 	font-size: 0;
+	font-family: $font-primary;
 	overflow: hidden;
-	background: #fff;
-	@media screen and (min-width: 768px) {
+	background: $cl-white;
+	@include breakpoint(768px) {
 		padding: 20px;
-
 	}
 	* {
 		padding: 0;
@@ -32,7 +49,7 @@ body {
 		display: block;
 		clear: both;
 		overflow: hidden;
-		@media screen and (min-width: 768px) {
+		@include breakpoint(768px) {
 			display: inline;
 			clear: none;
 			overflow: visible;
@@ -48,20 +65,21 @@ body {
 				background: none;
 				cursor: default;
 			}
-			&:checked ~ .c-accordion_panel {
+			&:checked ~ .c-accordion_content {
 				display: inline;
+				padding-right: 4px;
 			}
-			&:checked ~ .c-accordion_panel .c-accordion_content {
+			&:checked ~ .c-accordion_content .c-accordion_contentRaw {
 				float: left;
 				padding: 0 20px 20px 20px;
-				@media screen and (min-width: 768px) {
+				@include breakpoint(768px) {
 					padding-top: 20px;
 				}
 			}
 			
 		}
 		label {
-			background: #ddd; 
+			background: $cl-greyD;
 			padding: 10px 20px; 
 			display: block;
 			margin-bottom: 1px;
@@ -69,28 +87,30 @@ body {
 			position: relative;
 			left: 7px;
 			cursor: pointer;
-			@media screen and (min-width: 768px) {
+			@include breakpoint(768px) {
 				display: inline-block;
-				padding: 10px 15px; 
+				padding-left: 15px; 
+				padding-right: 15px; 
 			}
-			@media screen and (min-width: 960px) {
-				padding: 10px 20px; 
+			@include breakpoint(960px) {
+				padding-left: 20px; 
+				padding-right: 20px; 
 			}
 			&:hover {
-				background: #ccc;
+				background: $cl-greyC;
 			}
 		}
 	}
-	&_panel {
+	&_content {
 		height: 0;
 		overflow: hidden;
 		position: relative;
 		width: 0;
-		@media screen and (min-width: 768px) {
+		@include breakpoint(768px) {
 			display: inline-block;
 		}
 	}
-	&_content {
+	&_contentRaw {
 		display: block;
 		width: 100%;
 		box-sizing: border-box;
@@ -99,3 +119,4 @@ body {
 		}
 	}
 }
+// component style stop

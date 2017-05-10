@@ -16,8 +16,9 @@ body {
   margin: 10px;
   line-height: 22px;
   font-size: 0;
+  font-family: "Arial";
   overflow: hidden;
-  background: #fff; }
+  background: #FFF; }
   @media screen and (min-width: 768px) {
     .c-accordion {
       padding: 20px; } }
@@ -44,16 +45,17 @@ body {
       .c-accordion_item input:checked ~ label {
         background: none;
         cursor: default; }
-      .c-accordion_item input:checked ~ .c-accordion_panel {
-        display: inline; }
-      .c-accordion_item input:checked ~ .c-accordion_panel .c-accordion_content {
+      .c-accordion_item input:checked ~ .c-accordion_content {
+        display: inline;
+        padding-right: 4px; }
+      .c-accordion_item input:checked ~ .c-accordion_content .c-accordion_contentRaw {
         float: left;
         padding: 0 20px 20px 20px; }
         @media screen and (min-width: 768px) {
-          .c-accordion_item input:checked ~ .c-accordion_panel .c-accordion_content {
+          .c-accordion_item input:checked ~ .c-accordion_content .c-accordion_contentRaw {
             padding-top: 20px; } }
     .c-accordion_item label {
-      background: #ddd;
+      background: #DDD;
       padding: 10px 20px;
       display: block;
       margin-bottom: 1px;
@@ -64,23 +66,25 @@ body {
       @media screen and (min-width: 768px) {
         .c-accordion_item label {
           display: inline-block;
-          padding: 10px 15px; } }
+          padding-left: 15px;
+          padding-right: 15px; } }
       @media screen and (min-width: 960px) {
         .c-accordion_item label {
-          padding: 10px 20px; } }
+          padding-left: 20px;
+          padding-right: 20px; } }
       .c-accordion_item label:hover {
-        background: #ccc; }
-  .c-accordion_panel {
+        background: #CCC; }
+  .c-accordion_content {
     height: 0;
     overflow: hidden;
     position: relative;
     width: 0; }
     @media screen and (min-width: 768px) {
-      .c-accordion_panel {
+      .c-accordion_content {
         display: inline-block; } }
-  .c-accordion_content {
+  .c-accordion_contentRaw {
     display: block;
     width: 100%;
     box-sizing: border-box; }
-    .c-accordion_content h2 {
+    .c-accordion_contentRaw h2 {
       padding: 5px 0 20px; }

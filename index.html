@@ -16,8 +16,8 @@
 		<div class="c-accordion_item">
 			<input type="radio" id="static-tab-1" name="static-items" checked>
 			<label for="static-tab-1">King Arthur: Legend Of The Sword</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
 				   	<p>Telescopic crash-zooms, freeze frames, supporting geezers named Kung Fu Georgie, Mike the Spike and Goosefat Bill… if there were any doubt that this is Guy Ritchie’s fast, loose take on the King Arthur legend, then having the natural-born monarch address a female warrior as “honey tits” clears the matter up.</p>
 				</div> 	
@@ -26,8 +26,8 @@
 		<div class="c-accordion_item">
 			<input type="radio" id="static-tab-2" name="static-items">
 			<label for="static-tab-2">Sherlock Holmes</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
 				   	<p>Guy Ritchie, Jude Law and Robert Downey Jr. have passed their tests: Ritchie finally proving that he can drive a Hollywood tentpole into place with lairy gusto; Law (as trusty sidekick Dr Watson) establishing that he /can/ transcend the smug screen presence of recent years; and Downey Jr., with the least elementary brief of all, upending the character’s longstanding stuffiness with contemporary verve while nailing the eccentric bent of Arthur Conan Doyle’s great British detective. </p>
 				</div> 	
@@ -36,8 +36,8 @@
 		<div class="c-accordion_item">
 			<input type="radio" id="static-tab-3" name="static-items">
 			<label for="static-tab-3">Jurassic World</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
 				   	<p>Arguably the most iconic thing in the Jurassic franchise outside of that T-Rex, Goldblum’s character was referenced oh-so-briefly in the first Jurassic World with the inclusion of his book God Creates Dinosaurs. Now he’s back to complete the tyrannosaurus trifecta of dinosaur endangerment.</p>
 				</div> 	
@@ -46,8 +46,8 @@
 		<div class="c-accordion_item">
 			<input type="radio" id="static-tab-4" name="static-items">
 			<label for="static-tab-4">Guardians of the Galaxy 2</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
 				   	<p>I know what you’re after. Baby Groot. You want to know if Baby Groot is as adorable and cool as the Guardians of the Galaxy 2 trailers have made him seem. Well, I’m here to tell you that he is - the early verdicts weren’t lying when they say he “steals the show” - and if Disney announces a Baby Groot spin-off movie, or a Baby Groot spin-off TV show, or… hell, Baby Groot spin-off bath salts, I have no doubt that it would make a boatload of cash. Who knew that this much heart and humour could be poured into a tiny little twig who only says three words? What a guy. Oh, wait, you want more?</p>
 				</div> 	
@@ -57,42 +57,42 @@
 	<p class="headline">Task two</p>
 	<div class="c-accordion" id="js-accordion">
 		<div class="c-accordion_item">
-			<input type="radio" class="js-accordion_item" id="js-tab-1" name="js-items" checked>
-			<label for="js-tab-1">King Arthur: Legend Of The Sword</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<input type="radio" id="js-tab-1" name="js-items" data-request-url='{"url":"http://www.omdbapi.com/?t=Gladiator", "map":"Plot", "placeholder": ".js-accordion_content"}' >
+			<label for="js-tab-1">Gladiator</label>
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
-				   	<p>Telescopic crash-zooms, freeze frames, supporting geezers named Kung Fu Georgie, Mike the Spike and Goosefat Bill… if there were any doubt that this is Guy Ritchie’s fast, loose take on the King Arthur legend, then having the natural-born monarch address a female warrior as “honey tits” clears the matter up.</p>
+				   	<div class="js-accordion_content"></div>
 				</div> 	
 			</div>
 		</div>
 		<div class="c-accordion_item">
-			<input type="radio" class="js-accordion_item" id="js-tab-2" name="js-items" data-content="http://www.omdbapi.com/?t=Sherlock+Holmes">
+			<input type="radio" id="js-tab-2" name="js-items" data-request-url='{"url":"http://www.omdbapi.com/?t=Sherlock+Holmes", "map":"Plot", "placeholder": ".js-accordion_content"}' checked>
 			<label for="js-tab-2">Sherlock Holmes</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
-				   	<img src="default.gif" />
+				   	<div class="js-accordion_content"></div>
 				</div> 	
 			</div>	
 		</div>
 		<div class="c-accordion_item">
-			<input type="radio" class="js-accordion_item" id="js-tab-3" name="js-items" data-content="http://www.omdbapi.com/?t=Jurassic+World">
+			<input type="radio" id="js-tab-3" name="js-items" data-request-url='{"url":"http://www.omdbapi.com/?t=Jurassic+World", "map":"Plot", "placeholder": ".js-accordion_content"}'>
 			<label for="js-tab-3">Jurassic World</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
 				   	<h2>Description</h2>
-				   	<img src="default.gif" />
+				   	<div class="js-accordion_content"></div>
 				</div> 	
 			</div> 	
 		</div>
 		<div class="c-accordion_item">
-			<input type="radio" class="js-accordion_item" id="js-tab-4" name="js-items" data-content="http://www.omdbapi.com/?t=Guardians+of+the+Galaxy">
+			<input type="radio" id="js-tab-4" name="js-items" data-request-url='{"url":"http://www.omdbapi.com/?t=Guardians+of+the+Galaxy", "map":"Actors", "placeholder": ".js-accordion_content"}' >
 			<label for="js-tab-4">Guardians of the Galaxy</label>
-			<div class="c-accordion_panel">
-				<div class="c-accordion_content">
-				   	<h2>Description</h2>
-				   	<img src="default.gif" />
+			<div class="c-accordion_content">
+				<div class="c-accordion_contentRaw">
+				   	<h2>Actors</h2>
+				   	<div class="js-accordion_content"></div>
 				</div> 	
 			</div> 	
 		</div>
