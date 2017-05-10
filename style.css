@@ -1,0 +1,86 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #eee;
+  font-family: "Arial"; }
+
+.headline {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold;
+  margin: 0; }
+  .headline:first-child {
+    padding-top: 20px; }
+
+.c-accordion {
+  margin: 10px;
+  line-height: 22px;
+  font-size: 0;
+  overflow: hidden;
+  background: #fff; }
+  @media screen and (min-width: 768px) {
+    .c-accordion {
+      padding: 20px; } }
+  .c-accordion * {
+    padding: 0;
+    margin: 0; }
+  .c-accordion_item {
+    font-size: 14px;
+    display: block;
+    clear: both;
+    overflow: hidden; }
+    @media screen and (min-width: 768px) {
+      .c-accordion_item {
+        display: inline;
+        clear: none;
+        overflow: visible; } }
+    .c-accordion_item input {
+      clip: rect(0 0 0 0);
+      height: 1px;
+      opacity: 0;
+      position: fixed;
+      width: 1px;
+      z-index: -1; }
+      .c-accordion_item input:checked ~ label {
+        background: none;
+        cursor: default; }
+      .c-accordion_item input:checked ~ .c-accordion_panel {
+        display: inline; }
+      .c-accordion_item input:checked ~ .c-accordion_panel .c-accordion_content {
+        float: left;
+        padding: 0 20px 20px 20px; }
+        @media screen and (min-width: 768px) {
+          .c-accordion_item input:checked ~ .c-accordion_panel .c-accordion_content {
+            padding-top: 20px; } }
+    .c-accordion_item label {
+      background: #ddd;
+      padding: 10px 20px;
+      display: block;
+      margin-bottom: 1px;
+      margin-left: -7px;
+      position: relative;
+      left: 7px;
+      cursor: pointer; }
+      @media screen and (min-width: 768px) {
+        .c-accordion_item label {
+          display: inline-block;
+          padding: 10px 15px; } }
+      @media screen and (min-width: 960px) {
+        .c-accordion_item label {
+          padding: 10px 20px; } }
+      .c-accordion_item label:hover {
+        background: #ccc; }
+  .c-accordion_panel {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 0; }
+    @media screen and (min-width: 768px) {
+      .c-accordion_panel {
+        display: inline-block; } }
+  .c-accordion_content {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; }
+    .c-accordion_content h2 {
+      padding: 5px 0 20px; }
