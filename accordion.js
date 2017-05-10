@@ -56,22 +56,17 @@
 	
 	if (parseInt(getAndroidVersion(), 10) < 4) {
 		allElements.map(function(item){
+			alert(item.parentNode)
 			if (item.checked) {
 				item.parentNode.classList.add('checked')
 			}
 			item.addEventListener('change', function(){
-				alert(parseInt(getAndroidVersion(), 10))
 				allElements.map(function(item){
 					item.parentNode.classList.remove('checked');
 				})
 				item.parentNode.classList.add('checked')
 			})
 		})
-	}
-
-	window.onerror = function (message, url, lineNo){
-    	alert('Error: ' + message + '\n' + 'Line Number: ' + lineNo);
-    	return true;
 	}
 
 }())
