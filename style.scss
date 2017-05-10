@@ -15,8 +15,8 @@ $cl-greyC: #CCC;
 body {
 	padding: 0;
 	margin: 0;
-	background: #eee;
-	font-family: "Arial";
+	background: $cl-greyE;
+	font-family: $font-primary;
 }
 .headline {
 	font-size: 16px;
@@ -34,7 +34,6 @@ body {
 	margin: 10px;
 	line-height: 22px;
 	font-size: 0;
-	font-family: $font-primary;
 	overflow: hidden;
 	background: $cl-white;
 	@include breakpoint(768px) {

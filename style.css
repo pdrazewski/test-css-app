@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: #eee;
+  background: #EEE;
   font-family: "Arial"; }
 
 .headline {
@@ -16,7 +16,6 @@ body {
   margin: 10px;
   line-height: 22px;
   font-size: 0;
-  font-family: "Arial";
   overflow: hidden;
   background: #FFF; }
   @media screen and (min-width: 768px) {
