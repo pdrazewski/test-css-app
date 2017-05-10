@@ -27,13 +27,6 @@ body {
 		padding-top: 20px;
 	}
 }
-body { 
-  -webkit-animation: bugfix infinite 1s; 
-}
-@-webkit-keyframes bugfix { 
-  from {padding:0;} 
-  to {padding:0;} 
-}
 // helpers stop
 
 // component style start
@@ -60,6 +53,23 @@ body {
 			display: inline;
 			clear: none;
 			overflow: visible;
+		}
+		@media screen and (min-width:0\0) {
+			&.checked label {
+				background: none;
+				cursor: default;
+			}
+			&.checked .c-accordion_content {
+				display: inline;
+				padding-right: 4px;
+			}
+			&.checked .c-accordion_content .c-accordion_contentRaw {
+				float: left;
+				padding: 0 20px 20px 20px;
+				@include breakpoint(768px) {
+					padding-top: 20px;
+				}
+			}
 		}
 		input {
 			clip: rect(0 0 0 0);

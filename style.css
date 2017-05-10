@@ -12,14 +12,6 @@ body {
   .headline:first-child {
     padding-top: 20px; }
 
-body {
-  -webkit-animation: bugfix infinite 1s; }
-
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0; }
-  to {
-    padding: 0; } }
 .c-accordion {
   margin: 10px;
   line-height: 22px;
@@ -43,6 +35,20 @@ body {
         display: inline;
         clear: none;
         overflow: visible; } }
+    @media screen and (min-width: 0\0) {
+      .c-accordion_item.checked label {
+        background: none;
+        cursor: default; }
+      .c-accordion_item.checked .c-accordion_content {
+        display: inline;
+        padding-right: 4px; }
+      .c-accordion_item.checked .c-accordion_content .c-accordion_contentRaw {
+        float: left;
+        padding: 0 20px 20px 20px; } }
+  @media screen and (min-width: 0\0) and (min-width: 768px) {
+    .c-accordion_item.checked .c-accordion_content .c-accordion_contentRaw {
+      padding-top: 20px; } }
+
     .c-accordion_item input {
       clip: rect(0 0 0 0);
       height: 1px;
