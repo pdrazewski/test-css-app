@@ -12,6 +12,14 @@ body {
   .headline:first-child {
     padding-top: 20px; }
 
+body {
+  -webkit-animation: bugfix infinite 1s; }
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0; }
+  to {
+    padding: 0; } }
 .c-accordion {
   margin: 10px;
   line-height: 22px;
