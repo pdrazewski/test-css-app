@@ -69,4 +69,9 @@
 		})
 	}
 
+	window.onerror = function (message, url, lineNo){
+    	alert('Error: ' + message + '\n' + 'Line Number: ' + lineNo);
+    	return true;
+	}
+
 }())
