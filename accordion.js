@@ -57,7 +57,7 @@
 	if (parseInt(getAndroidVersion(), 10) < 4) {
 
 		allElements.map(function(item){
-			alert(item.checked)
+			alert(parseInt(getAndroidVersion(), 10))
 			if (item.checked) {
 				item.parentNode.classList.add('checked')
 			}
