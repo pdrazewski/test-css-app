@@ -63,6 +63,9 @@ body {
       position: relative;
       left: 7px;
       cursor: pointer; }
+      @media screen and (min-width: 0\0) {
+        .c-accordion_item label {
+          margin-left: -6px; } }
       @media screen and (min-width: 768px) {
         .c-accordion_item label {
           display: inline-block;

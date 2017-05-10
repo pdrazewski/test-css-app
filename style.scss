@@ -87,6 +87,10 @@ body {
 			position: relative;
 			left: 7px;
 			cursor: pointer;
+			//IE9&IE10 adjustmetns
+			@media screen and (min-width:0\0) {
+    			margin-left: -6px;
+			}
 			@include breakpoint(768px) {
 				display: inline-block;
 				padding-left: 15px; 

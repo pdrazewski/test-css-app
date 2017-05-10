@@ -1,6 +1,6 @@
 (function(){
 	"use strict";
-	
+
 	var items;
 	var loadExternalContent;
 
@@ -13,8 +13,8 @@
 		var xhr;
 		var res;
 
-		data = JSON.parse(item.dataset.requestUrl)
-		loaded = item.dataset.loaded;
+		data = JSON.parse(item.getAttribute('data-request-url'))
+		loaded = item.getAttribute('data-loaded');
 		placeholder = item.parentNode.querySelector(data.placeholder);
 
 		if (!loaded) {
@@ -25,7 +25,7 @@
 				if (xhr.status === 200) {
 					res = JSON.parse(xhr.responseText);
 					placeholder.innerHTML = res[data.map];
-					item.dataset.loaded = true;
+					item.setAttribute('data-loaded', true);
 				} else {
 					placeholder.innerHTML = 'Request failed. ' + xhr.status; 
 				}
