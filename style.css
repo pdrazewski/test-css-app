@@ -59,18 +59,19 @@ body {
       padding: 10px 20px;
       display: block;
       margin-bottom: 1px;
-      margin-left: -7px;
       position: relative;
-      left: 7px;
       cursor: pointer; }
       @media screen and (min-width: 0\0) {
         .c-accordion_item label {
-          margin-left: -6px; } }
+          margin-left: -5px;
+          left: 6px; } }
       @media screen and (min-width: 768px) {
         .c-accordion_item label {
           display: inline-block;
           padding-left: 15px;
-          padding-right: 15px; } }
+          padding-right: 15px;
+          margin-left: -6px;
+          left: 6px; } }
       @media screen and (min-width: 960px) {
         .c-accordion_item label {
           padding-left: 20px;

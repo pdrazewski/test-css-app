@@ -83,18 +83,19 @@ body {
 			padding: 10px 20px; 
 			display: block;
 			margin-bottom: 1px;
-			margin-left: -7px;
 			position: relative;
-			left: 7px;
 			cursor: pointer;
 			//IE9&IE10 adjustmetns
 			@media screen and (min-width:0\0) {
-    			margin-left: -6px;
+    			margin-left: -5px;
+    			left: 6px;
 			}
 			@include breakpoint(768px) {
 				display: inline-block;
 				padding-left: 15px; 
 				padding-right: 15px; 
+				margin-left: -6px;
+				left: 6px;
 			}
 			@include breakpoint(960px) {
 				padding-left: 20px; 
